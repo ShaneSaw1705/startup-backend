@@ -15,6 +15,9 @@ func main() {
 
 	testRoute := server.Group("/test")
 	{
+		testRoute.GET("/", func(ctx *gin.Context) {
+			ctx.String(200, "test")
+		})
 		testRoute.GET("/ping", route.GET)
 	}
 	server.Run(":8080")
