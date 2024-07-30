@@ -17,6 +17,5 @@ func main() {
 	{
 		testRoute.GET("/ping", route.GET)
 	}
-
 	server.Run(":8080")
 }
